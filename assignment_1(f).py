@@ -14,6 +14,7 @@ if __name__ == '__main__':
     element_2 = list(map(int, input('Enter elements of the second set: ').split()))
     set2 = SET(element_2)
 
+    print('Set Selection-->')
     print('1. Set1\n2. Set2')
     choice = int(input('Choose which set to perform operation on (1/2):'))
 
