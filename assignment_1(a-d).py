@@ -23,30 +23,35 @@ class SET:
 
 
 if __name__ == '__main__':
-    elements = list(map(int, input('Enter elements of the set: ').split()))
-    set1 = SET(elements)
+    element_1 = list(map(int, input('Enter elements of the first set: ').split()))
+    set1 = SET(element_1)
+    element_2 = list(map(int, input('Enter elements of the second set: ').split()))
+    set2 = SET(element_2)
     
+
     while True:
         print('Menu')
         print('1. ismember\n2. powerset\n3. subset\n4. union\n5. intersection\n0. exit')
         operation = int(input('Enter the operation number: '))
 
         if operation == 1:
-            element = int(input('Enter element: '))
-            print(set1.ismember(element))
+            print('1. Search from set1\n2. Search from set2')
+            selection = int(input('Select Set:'))
+
+            if selection == 1:
+                print(set1.ismember(int(input('Enter element to search from set1: '))))
+            elif selection == 2:
+                print(set2.ismember(int(input('Enter element to search from set2: '))))
+            else:
+                print('Invalid Selection')
+
         elif operation == 2:
             print(set1.powerset())
         elif operation == 3:
-            elements = list(map(int, input('Enter elements of the other set: ').split()))
-            set2 = SET(elements)
             print(set1.subset(set2))
         elif operation == 4:
-            elements = list(map(int, input('Enter elements of the other set: ').split()))
-            set2 = SET(elements)
             print(set1.union(set2))
         elif operation == 5:
-            elements = list(map(int, input('Enter elements of the other set: ').split()))
-            set2 = SET(elements)
             print(set1.intersection(set2))
         elif operation == 0:
             break
