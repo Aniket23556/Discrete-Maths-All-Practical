@@ -14,6 +14,7 @@ if __name__ == '__main__':
     element_2 = list(map(int, input('Enter elements of the second set: ').split()))
     set2 = SET(element_2)
 
+    print()
     print('Set Selection-->')
     print('1. Set1\n2. Set2')
     choice = int(input('Choose which set to perform operation on (1/2):'))
@@ -21,20 +22,20 @@ if __name__ == '__main__':
     if choice == 1:
         while True:
             print('Menu')
-            print('1. Difference\n2. Symmetric_difference\n0. exit')
+            print('1. Difference\n2. Symmetric_difference\n0. Exit')
             operation = int(input('Enter the operation number: '))
-
             if operation == 1:
                 print(set1.difference(set2))
             elif operation == 2:
                 print(set1.symmetric_difference(set2))
             elif operation == 0:
                 break
-        
+            else:
+                print('Invalid Input')
     elif choice == 2:
         while True:
             print('Menu')
-            print('1. Difference\n2. Symmetric_difference\n0. exit')
+            print('1. Difference\n2. Symmetric_difference\n0. Exit')
             operation = int(input('Enter the operation number: '))
 
             if operation == 1:
@@ -43,6 +44,8 @@ if __name__ == '__main__':
                 print(set2.symmetric_difference(set1))
             elif operation == 0:
                 break
+            else:
+                print('Invalid Input')
 
     else:
         print('Invalid Choice')
