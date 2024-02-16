@@ -9,7 +9,7 @@ class SET:
         return list(self.set.symmetric_difference(other.set))
 
 if __name__ == '__main__':
-    elements = list(map(int, input('Enter elements of the set: ').split()))
+    elements = list(map(int, input('Enter elements of the first set: ').split()))
     set1 = SET(elements)
     element_2 = list(map(int, input('Enter elements of the second set: ').split()))
     set2 = SET(element_2)
